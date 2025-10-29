@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEKD – Model Estimasi Korupsi Daerah</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🧭 MEKD</h1>
+    <h2>Model Estimasi Korupsi Daerah</h2>
+    <p class="tagline">Estimasi Ilmiah untuk Transparansi dan Pembangunan</p>
+  </header>
+
+  <section class="intro">
+    <p>
+      Aplikasi ini digunakan untuk <strong>mengestimasi potensi nilai korupsi (dalam rupiah)</strong> dan 
+      <strong>menggambarkan kondisi pembangunan daerah</strong> berdasarkan data fiskal dan sosial. 
+      Hasil bersifat simulatif dan tidak dimaksudkan sebagai penilaian hukum.
+    </p>
+  </section>
+
+  <section class="input-section">
+    <h3>Masukkan Data Daerah</h3>
+    <div class="grid">
+      <label>Pendapatan Asli Daerah (juta)</label><input id="pad" type="text" placeholder="Contoh: 1200">
+      <label>Dana Alokasi Umum (juta)</label><input id="dau" type="text" placeholder="Contoh: 2500">
+      <label>Dana Alokasi Khusus (juta)</label><input id="dak" type="text" placeholder="Contoh: 900">
+      <label>Dana Bagi Hasil (juta)</label><input id="dbh" type="text" placeholder="Contoh: 700">
+      <label>Total Belanja Daerah (juta)</label><input id="belanja" type="text" placeholder="Contoh: 4500">
+      <label>Total Pendapatan Daerah (juta)</label><input id="pendapatan" type="text" placeholder="Contoh: 5000">
+      <label>Jumlah Temuan BPK</label><input id="temuan" type="number" placeholder="Contoh: 3">
+      <label>Jumlah Penduduk (juta jiwa)</label><input id="penduduk" type="text" placeholder="Contoh: 2,4">
+      <label>Jumlah ASN</label><input id="asn" type="text" placeholder="Contoh: 4500">
+      <label>PDRB (Rupiah)</label><input id="pdrb" type="text" placeholder="Contoh: 50000000000000">
+      <label>Usia Otonomi Daerah (tahun)</label><input id="usia" type="number" placeholder="Contoh: 20">
+      <label>Lokasi di Pulau Jawa (1=Ya, 0=Tidak)</label><input id="jawa" type="number" min="0" max="1" placeholder="0 atau 1">
+      <label>Tipe Pemerintah Daerah</label>
+      <select id="tipe">
+        <option value="kabupaten">Kabupaten</option>
+        <option value="kota">Kota</option>
+        <option value="lainnya">Lainnya</option>
+      </select>
+    </div>
+    <button onclick="hitung()">🚀 Jalankan Estimasi</button>
+  </section>
+
+  <section class="result-section">
+    <h3>📊 Hasil Estimasi</h3>
+    <div class="result-card">
+      <h4>Estimasi Nilai Korupsi (Rp)</h4>
+      <p id="hasilKorupsi">-</p>
+    </div>
+    <div class="result-card">
+      <h4>Estimasi Pembangunan Manusia (IPM)</h4>
+      <p id="hasilIpm">-</p>
+    </div>
+    <canvas id="hasilChart" width="400" height="200"></canvas>
+  </section>
+
+  <footer>
+    <p>© 2025 MEKD – Model Estimasi Korupsi Daerah<br>
+    Dikembangkan oleh <strong>Prof. Dr. Septian Bayu Kristanto</strong> – UKRIDA</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
