@@ -1,3 +1,9 @@
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
