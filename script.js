@@ -157,8 +157,6 @@ function hitung() {
     hasilIpmEl.innerText = estimasiIpm.toFixed(2) + " (Simulasi MEKD)";
   }
 
-  // Tampilkan grafik dengan dua sumbu Y: korupsi (left), IPM (right, 0-100)
-  tampilkanGrafikDualAxis(estimasiKorupsi, estimasiIpm);
 }
 
 /* -------------------------
